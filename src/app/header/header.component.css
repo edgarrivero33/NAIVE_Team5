@@ -1,0 +1,26 @@
+.header {
+  background-color: #353f4f;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  vertical-align: middle;
+}
+  .logo{
+    box-sizing: border-box;
+    align-items: center;
+    font-weight: 400;
+  }
+
+  .divider {
+    padding-left: 7px;
+    padding-right: 7px;
+    font-size: 20px;
+    color: #8797ae !important;
+  }
+
+  .title-name {
+    font-size: 18px;
+    color: #ffffffe6;
+    line-height: 24px;
+    vertical-align: bottom;
+  }

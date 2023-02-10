@@ -1,0 +1,16 @@
+<div>
+  <table class="table" *ngIf="display">
+    <thead>
+      <tr>
+        <th>Participant</th>
+        <th>Manager</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of dataList; let i = index; let even = even;">
+        <td *ngIf="even">{{data}}</td>
+        <td *ngIf="even">{{dataList[i + 1]}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,25 @@
+<button *ngIf="displayButton"class="btn btn-primary" (click) = "onSubmit()"></button>
+<button *ngIf="!displayButton"class="btn btn-primary disabled">Select Rollup</button>
+<ngx-dropzone (change)="onSelect($event)">
+<ngx-dropzone-label>Upload INVA/DE Rollup</ngx-dropzone-label>
+<ngx-dropzone-preview *ngFor="let f of files" [removable]="true" (removed)="onRemove(f)">
+  <ngx-dropzone-label>{{ f.name }} ({{ f.type }})</ngx-dropzone-label>
+</ngx-dropzone-preview>
+</ngx-dropzone>
+<button *ngIf="displayButton"class="btn btn-primary" (click) = "onSubmit()">Submit</button>
+<b>
+<h1>User Initials: </h1>
+<input type="text" id="fname" name="fname"><br><br>
+<input type="text" id="fname" name="fname"><br><br>
+<input type="text" id="fname" name="fname"><br><br>
+<input type="text" id="fname" name="fname"><br><br>
+<input type="text" id="fname" name="fname"><br><br>
+<button *ngIf="!displayButton"class="btn btn-primary disabled">Create User</button>
+</b>
+<a *ngIf="displayData" href="data.csv"
+class="btn btn-primary"
+style="margin-left: 10px"
+target="_blank"
+download="data.csv"
+>Download Data File</a>
+<app-output [display]="displayData"></app-output>
